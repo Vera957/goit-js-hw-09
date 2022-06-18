@@ -4,12 +4,10 @@ const form = document.querySelector('.form');
 
 const btn = document.querySelector('button');
 let amount = 0;
-delay = 0;
-step = 0;
+let delay = 0;
+let step = 0;
 
-
-
-const createPromise = (position, delay) =>{
+const createPromise = (position, delay) => {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
     setTimeout(() => {
@@ -20,7 +18,7 @@ const createPromise = (position, delay) =>{
       }
     }, delay);
   });
-}
+};
 
 btn.addEventListener('click', onSubmit);
 form.addEventListener('input', picker);
@@ -54,8 +52,9 @@ function onSubmit(e) {
           }
         );
       });
-        delay = delay + step;
-  } form.reset();
+    delay = delay + step;
+  }
+  form.reset();
 }
 
 function picker(e) {
@@ -66,4 +65,3 @@ function picker(e) {
     `picker got values: amount:${amount}, delay:${delay}, step${step}`
   );*/
 }
-

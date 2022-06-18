@@ -8,7 +8,6 @@ start.setAttribute('disabled', 'disabled');
 const elemsToFill = document.querySelectorAll('.value');
 
 let time = null;
-//elemsToFill.forEach(elem => console.log(elem.dataset.days));
 
 //const flatpi
 const options = {
@@ -22,8 +21,6 @@ const options = {
 };
 
 const fp = flatpickr('input', {
-  /*minDate: 'today',
-  dateFormat: 'Y-m-d',*/
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
@@ -46,7 +43,6 @@ const fp = flatpickr('input', {
       return time;
     }
   },
-  //посмотреть репету
 });
 
 function convertMs(ms) {
